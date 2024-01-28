@@ -3,12 +3,41 @@ import { createGlobalStyle } from "styled-components";
 
 
 export const GlobalStyle= createGlobalStyle`
+
+
 body{
 margin: 0;
 padding:0;
 box-sizing: border-box;
 font-family: 'Indie Flower', cursive;
 background:  ${({theme})=>theme.setbodyColor};
+
+
+
+@media screen and (min-width: 1240px) {
+
+    .container{
+        width: 80% !important;
+        margin: auto !important;
+
+    }
+
+    .section{
+        padding: 6rem 0 4rem;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 2560px) {
+
+body{
+    zoom: 1.7;
+}
+}
+
+
 a{
     text-decoration: none;
 }

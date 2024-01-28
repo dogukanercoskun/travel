@@ -9,6 +9,7 @@ const greytext="rgb(190,190,190)"
 const inputColor="rgb(239,239,239)"
 const bodyColor="rgb(249,240,246)"
 const cardBg="rgb(225,225,235)"
+const cardHover="rgb(255,255,255)"
 
 
 
@@ -23,7 +24,7 @@ const setgreytext=greytext
 const setinputColor=inputColor
 const setbodyColor=bodyColor
 const setcardBg=cardBg
-
+const setcardHover= cardHover
 
 const theme={
  setPrimaryColor,
@@ -37,6 +38,7 @@ setgrandientColor,
  setinputColor,
  setbodyColor,
  setcardBg,
+ setcardHover
 
 }
 

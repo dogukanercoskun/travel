@@ -7,7 +7,7 @@ function Inputs(props) {
         <>
           <div className={props.divClassNameTwo}>
             <label htmlFor="price">Maksimum Fiyat:</label>
-            <h3 className="total">250000TL </h3>
+            <h3 className="total">5000$</h3>
           </div>
           <div className="input flex">
             <input type="range" min="10000" max="250000" />

@@ -9,10 +9,20 @@ import { FaInstagram } from "react-icons/fa";
 import { SiTripadvisor } from "react-icons/si";
 import { FaList } from "react-icons/fa";
 import { TbApps } from "react-icons/tb";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 
 function Home() {
+
+    useEffect(()=>{
+      Aos.init({duration:2000});
+    },[])
+
+  
+
   return (
     <>
       <div className="overlay"></div>
@@ -27,11 +37,11 @@ function Home() {
 
       <div className="homeContent container">
         <div className="textDiv">
-          <span className="smallText">Sizin Seçiminiz Bizim İşimiz</span>
-          <h1 className="homeTitle">Tatilinizi Şimdi Arayın</h1>
+          <span data-aos='fade-up' className="smallText">Sizin Seçiminiz Bizim İşimiz</span>
+          <h1  data-aos='fade-up' className="homeTitle">Tatilinizi Şimdi Arayın</h1>
         </div>
 
-        <div className="cardDiv grid">
+        <div data-aos='fade-up' className="cardDiv grid">
           <Inputs
             divClassName="destinationInput"
             htmlForName="city"
@@ -63,7 +73,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="homeFooterIcons flex">
+        <div data-aos='fade-up' className="homeFooterIcons flex">
           <div className="rightIcons">
           <TfiFacebook className="icon"/>
           <FaInstagram className="icon"/>
@@ -71,7 +81,7 @@ function Home() {
           </div>
           <div className="leftIcons">
           <FaList className="icon"/>
-          <TbApps lassName="icon" />
+          <TbApps className="icon" />
           </div>
 
         </div>

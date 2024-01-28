@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 
+
 const NavbarHeader = styled.header`
   .header {
     position: fixed;
@@ -26,7 +27,19 @@ const NavbarHeader = styled.header`
       }
     }
 
-    @media screen and (max-width: 768px) {
+  
+    .toggleNavbar {
+      .icon {
+        font-size: 25px;
+        color: ${({ theme }) => theme.setPrimaryColor};
+      }
+      &:hover.icon {
+        color: ${({ theme }) => theme.setSecondaryColor};
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
       .navBar {
         position: absolute;
         background: ${({ theme }) => theme.setwhiteColorDeam};
@@ -64,8 +77,9 @@ const NavbarHeader = styled.header`
             margin-top: 1rem;
 
             a {
-              font-weight: 600;
+              font-weight: 500;
               color: ${({ theme }) => theme.setwhiteColor};
+              
             }
           }
         }
@@ -86,16 +100,73 @@ const NavbarHeader = styled.header`
       }
     }
 
-    .toggleNavbar {
-      .icon {
-        font-size: 25px;
-        color: ${({ theme }) => theme.setPrimaryColor};
-      }
-      &:hover.icon {
-        color: ${({ theme }) => theme.setSecondaryColor};
+  @media screen and (min-width: 769px) {
+    .toggleNavbar,.closeNavbar{
+      display: none;
+
+    }
+
+    .header {
+      padding: 1.5rem 2rem ;
+
+      .navBar{
+
+        .navLists{
+          display: flex;
+          align-items: center;
+          justify-content:center;
+          flex-direction: row;
+
+            .navItem{
+              .navLink{
+                color: ${({ theme }) => theme.settextColor};
+                padding:0 0.45rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+
+                &:hover{
+                  color: ${({ theme }) => theme.setPrimaryColor};
+                }
+
+              }
+            }
+            .btn{
+              margin-left: 1rem;
+              a{
+                color: ${({ theme }) => theme.setwhiteColor};
+               font-weight: 500;
+
+              }
+            }
+        }
+
+
       }
     }
+    
   }
+  @media screen and (min-width: 960px) {
+    .header {
+      .navBar{
+        .navLists{
+            .navItem{
+              padding: 0 0.7rem;
+              
+            }
+        }
+
+
+      }
+    }
+
+  }
+  @media screen and (min-width: 1240px) {
+    .header {
+      padding:1rem 8.5rem;
+    }
+
+  }
+
 `;
 
 export default NavbarHeader;

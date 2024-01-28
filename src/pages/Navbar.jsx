@@ -78,7 +78,9 @@ function Navbar() {
                   İletişim
                 </a>
               </li>
-              <button className="btn">Şimdi Rezervasyon Yap</button>
+              <button className="btn">
+                <a href="#"> Şimdi Rezervasyon Yap</a>
+              </button>
             </ul>
             <div onClick={showNav} className="closeNavbar">
               <IoMdCloseCircle className="icon" />
